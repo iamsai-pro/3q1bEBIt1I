@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puthuru Karthik - Portfolio</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* Classic serif font */
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfcf8; /* Ivory */
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            color: #2c3e50; /* Dark Navy */
+        }
+
+        header .title {
+            font-size: 1.2em;
+            color: #7f8c8d; /* Gray */
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: #34495e; /* Navy */
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #2980b9; /* Brighter Blue */
+        }
+
+        .contact-info span {
+            color: #7f8c8d;
+            margin: 0 5px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2c3e50; /* Dark Navy */
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e74c3c; /* Reddish accent */
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        /* Objective */
+        #objective p {
+            font-style: italic;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h3 {
+            font-size: 1.3em;
+            color: #34495e; /* Navy */
+            margin-bottom: 5px;
+        }
+
+        .education-item .institution {
+            font-weight: bold;
+            color: #2c3e50; /* Dark Navy */
+        }
+
+        .education-item .duration {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gray */
+            font-style: italic;
+        }
+
+        /* Skills */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            padding: 5px 10px;
+            background-color: #ecf0f1; /* Light Gray */
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 0.95em;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3 {
+            font-size: 1.3em;
+            color: #34495e; /* Navy */
+            margin-bottom: 5px;
+        }
+
+        .experience-item .company {
+            font-weight: bold;
+            color: #2c3e50; /* Dark Navy */
+        }
+
+        .experience-item .duration {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gray */
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .experience-item ul {
+            list-style: disc;
+            margin-left: 25px;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-item h3 {
+            font-size: 1.3em;
+            color: #34495e; /* Navy */
+            margin-bottom: 5px;
+        }
+
+        .project-item .technologies {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gray */
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .project-item .technologies span {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        .project-item .project-link {
+            color: #2980b9; /* Brighter Blue */
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        .project-item .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Certifications */
+        .certification-item {
+            margin-bottom: 15px;
+        }
+
+        .certification-item h3 {
+            font-size: 1.1em;
+            color: #34495e; /* Navy */
+            margin-bottom: 3px;
+        }
+
+        .certification-item .issuer {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gray */
+            font-style: italic;
+        }
+
+        /* Achievements */
+        .achievements-list {
+            list-style: disc;
+            margin-left: 25px;
+        }
+
+        .achievements-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Interests */
+        .interests-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .interests-list li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .contact-info a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            .skills-list li, .interests-list li {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id="fullName">PUTHURU KARTHIK</h1>
+            <p class="title">Computer Science and Engineering Student</p>
+            <div class="contact-info">
+                <a href="mailto:puthurukarthik2004@gmail.com" id="email">puthurukarthik2004@gmail.com</a>
+                <span>|</span>
+                <a href="tel:+919849849831" id="phone">+91-9849849831</a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/putturu-karthik-8a3520297/" id="linkedin">LinkedIn</a>
+            </div>
+        </header>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>To be part of an organization that encourages learning and professional growth while achieving mutual success. I aim to apply my technical knowledge and creativity to contribute effectively and fulfil the responsibilities of the role entrusted to me.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.E. Computer Science and Engineering</h3>
+                <p class="institution">RMD Engineering College, Chennai</p>
+                <p class="duration">2022 – 2026</p>
+            </div>
+            <div class="education-item">
+                <h3>Higher Secondary Education</h3>
+                <p class="institution">Narayana Junior College, Nellore, AP</p>
+                <p class="duration">2020 – 2022</p>
+            </div>
+            <div class="education-item">
+                <h3>Secondary Education</h3>
+                <p class="institution">Ratnam High School</p>
+                <p class="duration">2020</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>C</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </section>
+
+        <section id="internship">
+            <h2>Internship</h2>
+            <div class="experience-item">
+                <h3>Python Development Intern</h3>
+                <p class="company">Octa Net Services Pvt Ltd.</p>
+                <p class="duration">June 2024 – July 2024</p>
+                <ul>
+                    <li>Worked on Python-based applications, improving problem-solving and backend development skills.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Cyber Security Intern</h3>
+                <p class="company">Cisco Networking Academy</p>
+                <p class="duration">April 2024</p>
+                <ul>
+                    <li>Gained foundational knowledge of cyber security concepts, threats, and basic network protection techniques.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certification-item">
+                <h3>Ethical Hacking Essentials (EHE)</h3>
+                <p class="issuer">EC-COUNCIL, from COURSERA</p>
+            </div>
+            <div class="certification-item">
+                <h3>GenAI with MongoDB</h3>
+                <p class="issuer">MongoDB</p>
+            </div>
+        </section>
+
+        <section id="project">
+            <h2>Project</h2>
+            <div class="project-item">
+                <h3>Personal Budget Planner</h3>
+                <p>Built a simple and intuitive web application to help users track their income and expenses, categorize spending, and monitor their overall budget balance. The planner enables users to add, edit, and delete financial entries with real-time updates to the budget summary, empowering better personal finance management.</p>
+                <p class="technologies"><span>Tech Stack:</span> HTML5, CSS3, Spring Boot, MySQL</p>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul class="achievements-list">
+                <li>Received a paid Internship offer from Octa Net offers comprehensive virtual training.</li>
+                <li>Learnt about Deploying and Evaluating GenAI Apps with MongoDB.</li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul class="interests-list">
+                <li>Exploring AI and automation trends</li>
+                <li>Photography</li>
+                <li>Video editing</li>
+                <li>Fitness training</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Minimal JavaScript for interactivity if needed, but not strictly required by prompt for basic display
+        // The provided JSON is already directly used in the HTML for static rendering.
+    </script>
+</body>
+</html>
